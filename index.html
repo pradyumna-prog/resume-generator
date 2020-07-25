@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Resume of Pradyumna Tripathi"/>
 
-		<link type="text/css" rel="stylesheet" href="formal.css">
-		<link href="http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300" rel="stylesheet" type="text/css">
+		<link type="text/css" rel="stylesheet" 	href="formal.css">
+		<!--<link href="http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300" rel="stylesheet" type="text/css">-->
 		<link rel="shortcut icon" href="cvmaker.ico">
 		<script src = "script.js"></script>
 		<title>MyCV</title>
@@ -19,8 +19,8 @@
 				<div id="contactDetails">
 					<ul>
 						<li>📧: <span contenteditable="">email-id@domain.com</span></li>
-												<li>📞: <span contenteditable="">01234567890</span></li>
-												<li>🏠: <span contenteditable="">Enter addreess</span></li>
+						<li>📞: <span contenteditable="">01234567890</span></li>
+						<li>🏠: <span contenteditable="">Enter addreess</span></li>
 					</ul>
 				</div>
 			</div>			
@@ -28,9 +28,9 @@
 				<img src="headshot.jpg" alt="" />
 			</div>
 			<div class="clear"></div>
-			</div>
+		</div>
 				
-			<div id="mainArea">
+		<div id="mainArea">
 				<section>
 					<article>
 						<div class="sectionTitle">
@@ -169,6 +169,38 @@
 					<div class="clear"></div>
 				</section>
 
-			</div>
+				<section>
+					<div class="sectionTitle">
+						<h1>Perosonal Details</h1>
+					</div>
+					
+					<div class="sectionContent">
+						<ul class="keySkills" id="technicalSkills" style="margin-top: 5px;">
+							<li>◾ Father's Name :<span contenteditable="">Mr.</span></li>
+							<li>◾ Date of Birth : <span contenteditable="">dob</span></li>
+							<li>◾ Languages known :<span contenteditable="">English and Hindi</span></li>
+							<li>◾ Interest and Hobbies : <span contenteditable="">Add Hobbies</span></li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="sectionTitle">
+						<h1>Declaration</h1>
+					</div>
+					<div class="sectionContent">
+						<p>I hereby declare that the above mentioned information is correct up to my knowledge.
+							<br/><br/>DATE: <span id="date" contenteditable=""><script>
+										document.getElementById("date").innerHTML = (new Date()).toLocaleDateString()
+									</script>
+								</span>
+							<br/>PLACE: <span id="place" contenteditable="">Dehradun</span>
+							<span contenteditable="" style="float: right;"> (Your Name)</span>
+					</p>
+					</div>
+				</section>
+
+		</div>
+	</div>
 </body>
 </html>

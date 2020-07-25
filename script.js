@@ -1,5 +1,9 @@
 let skillId = 'T0', projectId = 'P1', strengthId = 'S0', workshopId = 'W0', achievementId = 'A0';
 
+getDate = () => {
+    document.getElementById("date").innerHTML = (new Date()).toLocaleDateString();
+}
+
 addTechnicalSkill = () => {
     li = document.createElement('li');
     li.setAttribute('id',skillId);
@@ -29,7 +33,7 @@ addTechnicalSkill = () => {
     skillId = incrementId("technical", skillId);
 }
 
-function btnRemoveHandler(event){
+btnRemoveHandler = event => {
     document.getElementById(event['target']['id']).remove();
 }
 
@@ -80,7 +84,7 @@ addProject = () => {
     projectId = incrementId('project', projectId);
 }
 
-function addSWC(type) {
+addSWC = type => {
     if(type == "strengths") id = strengthId;
     else if(type == "workshops") id = workshopId;
     else if(type == "achievements") id = achievementId;
@@ -110,7 +114,7 @@ function addSWC(type) {
     incrementId(type, id);
 }
 
-function incrementId(type, strId){
+incrementId = (type, strId) => {
 
     id = parseInt(strId.slice(1, strId.length), 10);
     
