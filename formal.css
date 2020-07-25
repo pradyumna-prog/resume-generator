@@ -113,6 +113,7 @@ section:last-child {
     width: 100%;
     display: block;
     font-size: small;
+    margin-top: 5px;
 }
 
 .sectionTitle h1 {
@@ -124,7 +125,7 @@ section:last-child {
 
 .sectionContent h2 {
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	margin-bottom: -2px;
 }
 
@@ -141,8 +142,7 @@ section:last-child {
 }
 
 .subDetails {
-	font-size: 0.8em;
-	font-style: italic;
+	font-size: 1em;
 	margin-bottom: 3px;
 }
 
@@ -180,13 +180,13 @@ input[type=text]:focus {
     border:2px groove #319afc;
 }
 
-#add{
+#add {
     color: green;
     border: 1px solid green;
     border-radius: 5px;
     cursor: pointer;
 }
-#add:hover{
+#add:hover {
     color:white;
     background-color: green;
 }

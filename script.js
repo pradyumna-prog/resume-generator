@@ -1,6 +1,6 @@
 let listItemId = 0;
 
-function addTechnicalSkill(){
+addTechnicalSkill = () => {
     li = document.createElement('li');
     key = document.getElementById("technicalKey").value;
     values = document.getElementById("technicalValue").value;
@@ -34,4 +34,8 @@ function addTechnicalSkill(){
 
 function btnRemoveHandler(event){
     document.getElementById(event['target']['id']).remove();
+}
+
+addProject = () => {
+    
 }
