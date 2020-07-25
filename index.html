@@ -87,7 +87,7 @@
 						<h1>Subjects of Interest</h1>
 					</div>	
 					<div class="sectionContent">
-						<ul class="keySkills">
+						<ul class="keySkills" style="-moz-column-count:2; -webkit-column-count:2; column-count:2;">
 							<li><span>◾ </span><span contenteditable="">Subject 1</span></li>
 							<li><span>◾ </span><span contenteditable="">Subject 2</span></li>
 						</ul>
@@ -113,21 +113,60 @@
 					<div class="sectionTitle">
 						<h1>Projects</h1>
 					</div>
-					<div class="sectionContent">
-						<article>
+					<div class="sectionContent" id="projectDetails">
+						<article id="P0">
 							<h2 contenteditable="">Project Title</h2>
-							<p class="subDetails" style="font-style: unset;">
+							<button id = "P0" class="btnRemove" onclick="btnRemoveHandler(event)">X</button>
+							<p class="subDetails">
 								Technologies: <span contenteditable="">add</span> |
 								Role: <span contenteditable="">add</span> |
 								Duration: <span contenteditable="">add</span>
 							</p>
 							<p contenteditable="">Add description</p>
-							<button onclick="addProject()" id="add">Add</button>
 						</article>
 					</div>
+					<button onclick="addProject()" id="add">Add</button>
 					<div class="clear"></div>
 				</section>
 	
+				<section>
+					<div class="sectionTitle">
+						<h1>Strengths</h1>
+					</div>
+					
+					<div class="sectionContent">
+						<ul class="keySkills" id="strengths"></ul>
+						<input type="text" placeholder="Enter strength" id="strengthsValue" />
+						<button onclick="addSWC('strengths')" id="add">Add</button>
+					</div>
+					<div class="clear"></div>
+				</section>
+
+				<section>
+					<div class="sectionTitle">
+						<h1>Workshop/Certification</h1>
+					</div>
+					
+					<div class="sectionContent">
+						<ul class="keySkills" id="workshops"></ul>
+						<input type="text" placeholder="Enter Workshop/Certification" id="workshopsValue" />
+						<button onclick="addSWC('workshops')" id="add">Add</button>
+					</div>
+					<div class="clear"></div>
+				</section>
+
+				<section>
+					<div class="sectionTitle">
+						<h1>Achievements</h1>
+					</div>
+					
+					<div class="sectionContent">
+						<ul class="keySkills" id="achievements"></ul>
+						<input type="text" placeholder="Enter Achievements" id="achievementsValue" />
+						<button onclick="addSWC('achievements')" id="add">Add</button>
+					</div>
+					<div class="clear"></div>
+				</section>
 
 			</div>
 </body>
