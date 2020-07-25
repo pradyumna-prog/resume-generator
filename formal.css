@@ -202,12 +202,6 @@ input[type=text]:focus {
 	#profileimg {
 		display: none;
     }
-    
-	.keySkills {
-	-moz-column-count:1;
-	-webkit-column-count:1;
-	column-count:1;
-	}
 }
 
 @media all and (max-width: 601px) {
@@ -237,11 +231,6 @@ input[type=text]:focus {
 		font-size: 1em;
 	}
 	
-	.keySkills {
-		-moz-column-count:1;
-		-webkit-column-count:1;
-		column-count:1;
-    }
     #add{
         float: none;
     }
@@ -296,10 +285,7 @@ input[type=text]:focus {
 	}
 	
 	.keySkills {
-	-moz-column-count:1;
-	-webkit-column-count:1;
-    column-count:1;
-    font-size: smaller;
+        font-size: smaller;
 	}
 	
 	#name h1 {
