@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Resume of Pradyumna Tripathi"/>
+
+		<link type="text/css" rel="stylesheet" href="formal.css">
+		<!--<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>-->
+		<script src = "script.js"></script>
+		<title>MyCV</title>
+</head>
+<body>
+	<div id="cv">
+		<div class="mainDetails">
+			<div id="name">
+				<h2 contenteditable="">Your Name</h2>
+				<div id="contactDetails">
+					<ul>
+						<li>📧: <span contenteditable="">email-id@domain.com</span></li>
+												<li>📞: <span contenteditable="">01234567890</span></li>
+												<li>🏠: <span contenteditable="">Enter addreess</span></li>
+					</ul>
+				</div>
+			</div>			
+			<div id="profileimg">
+				<img src="headshot.jpg" alt="" />
+			</div>
+			<div class="clear"></div>
+			</div>
+				
+			<div id="mainArea">
+				<section>
+					<article>
+						<div class="sectionTitle">
+							<h1>Academic Details</h1>
+						</div>	
+						<div class="sectionContent">
+							<table>
+								<thead>
+								<tr>
+									<th>Examination</th>
+									<th>Board/University</th>
+									<th>School/College</th>
+									<th>Year of passing</th>
+									<th>CGPA/Percentage</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td contenteditable="">MCA</td>
+									<td contenteditable="">Graphic Era University, Dehradun</td>
+									<td contenteditable="">Graphic Era University, Dehradun</td>
+									<td contenteditable="">2021</td>
+									<td contenteditable="">0.00</td>
+								</tr>
+								<tr>
+									<td contenteditable="">BCA</td>
+									<td contenteditable="">Graphic Era University, Dehradun</td>
+									<td contenteditable="">Graphic Era University, Dehradun</td>
+									<td contenteditable="">2019</td>
+									<td contenteditable="">0.00</td>
+								</tr>
+								<tr>
+									<td contenteditable="">Intermediate</td>
+									<td contenteditable="">CBSE</td>
+									<td contenteditable="">School</td>
+									<td contenteditable="">2016</td>
+									<td contenteditable="">0.00</td>
+								</tr>
+								<tr>
+									<td contenteditable="">High School</td>
+									<td contenteditable="">CBSE</td>
+									<td contenteditable="">School</td>
+									<td contenteditable="">2014</td>
+									<td contenteditable="">0.00</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</article>
+				<div class="clear"></div>
+				</section>
+
+				<section>
+					<div class="sectionTitle">
+						<h1>Subjects of Interest</h1>
+					</div>	
+					<div class="sectionContent">
+						<ul class="keySkills">
+							<li><span>◾ </span><span contenteditable="">Subject 1</span></li>
+							<li><span>◾ </span><span contenteditable="">Subject 2</span></li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</section>
+
+				<section>
+					<div class="sectionTitle">
+						<h1>Technical Skills</h1>
+					</div>
+					
+					<div class="sectionContent">
+						<ul class="keySkills" id="technicalSkills"></ul>
+						<input type="text" placeholder="Key" id="technicalKey" />
+						<input type="text" placeholder="Values" id="technicalValue" />
+						<button onclick="addTechnicalSkill()">Add</button>
+					</div>
+					<div class="clear"></div>
+				</section>
+
+			</div>
+</body>
+</html>

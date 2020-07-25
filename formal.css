@@ -1,0 +1,278 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+html, body {
+	background: #181818; 
+	font-family: 'Lato', helvetica, arial, sans-serif; 
+	font-size: 16px; 
+	color: #222;}
+
+.clear {clear: both;}
+
+p {
+	font-size: 1em;
+	line-height: 1.4em;
+	margin-bottom: 20px;
+	color: #444;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 3px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#cv {
+	width: 90%;
+	max-width: 800px;
+	background: #f3f3f3;
+	margin: 30px auto;
+}
+
+.mainDetails {
+	padding: 25px 35px;
+	border-bottom: 2px solid #cf8a05;
+	background: #ededed;
+}
+
+#name h2 {
+	font-size: 2em;
+	font-weight: 700;
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+	margin-bottom: -6px;
+}
+
+#mainArea {
+    padding: 0 40px;
+}
+
+#profileimg {
+	width: 12.5%;
+	float: right;
+	margin-right: 30px;
+}
+
+#profileimg img {
+	width: 100%;
+	height: auto;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+#name {
+	float: left;
+}
+
+#contactDetails {
+	float: left;
+}
+
+#contactDetails ul {
+	list-style-type: none;
+	font-size: 0.9em;
+	margin-top: 2px;
+}
+
+#contactDetails ul li {
+	margin-bottom: 3px;
+	color: #444;
+}
+
+section {
+	border-top: 1px solid #dedede;
+	padding: 20px 0 0;
+}
+
+section:first-child {
+	border-top: 0;
+}
+
+section:last-child {
+	padding: 20px 0 10px;
+}
+
+.sectionTitle {
+    width: 100%;
+    display: block;
+    background-color: #bfbfbf;
+}
+
+.sectionContent {
+    width: 100%;
+    display: block;
+    font-size: small;
+}
+
+.sectionTitle h1 {
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+    color: #000000;
+    font-weight: bold;
+}
+
+.sectionContent h2 {
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	margin-bottom: -2px;
+}
+
+.sectionContent th {
+    font-weight: bold;
+    color: #000000;
+}
+
+.sectionContent input {
+    width: 40%;
+}
+.sectionContent button{
+    width: fit-content;
+}
+
+.subDetails {
+	font-size: 0.8em;
+	font-style: italic;
+	margin-bottom: 3px;
+}
+
+.keySkills {
+	list-style-type: none;
+	-moz-column-count:2;
+	-webkit-column-count:2;
+    column-count:1;
+	font-size: 1em;
+	color: #444;
+}
+
+.keySkills ul li {
+    margin-bottom: 3px;
+}
+
+@page{
+	size: 8.3in 11.7in;
+	margin: 5px;
+}
+
+@media all and (min-width: 602px) and (max-width: 800px) {
+	#profileimg {
+		display: none;
+    }
+    
+	.keySkills {
+	-moz-column-count:2;
+	-webkit-column-count:2;
+	column-count:2;
+	}
+}
+
+@media all and (max-width: 601px) {
+	#cv {
+		width: 95%;
+		margin: 10px auto;
+		min-width: 280px;
+	}
+	
+	#profileimg {
+		display: none;
+	}
+	
+	#name, #contactDetails {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.sectionTitle, .sectionContent {
+		float: none;
+		width: 100%;
+	}
+	
+	.sectionTitle {
+		margin-left: -2px;
+		font-size: 1em;
+	}
+	
+	.keySkills {
+		-moz-column-count:2;
+		-webkit-column-count:2;
+		column-count:2;
+    }
+    
+    table, thead, tbody, th, td, tr { 
+		display: block; 
+    }
+    /* Hiding table heading*/
+    thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+    }
+    
+    tr { border: 1px solid rgba(33, 33, 33, 0.5); }
+    td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+    }
+    td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+    }
+    td:nth-of-type(1):before { content: "Examination"; }
+	td:nth-of-type(2):before { content: "Board/University"; }
+	td:nth-of-type(3):before { content: "School/College"; }
+	td:nth-of-type(4):before { content: "Year of Passing"; }
+    td:nth-of-type(5):before { content: "CGPA/Percentage"; }
+    
+}
+
+@media all and (max-width: 480px) {
+	.mainDetails {
+		padding: 15px 15px;
+	}
+	
+	section {
+		padding: 15px 0 0;
+	}
+	
+	#mainArea {
+		padding: 0 25px;
+	}
+	
+	.keySkills {
+	-moz-column-count:2;
+	-webkit-column-count:2;
+    column-count:2;
+    font-size: smaller;
+	}
+	
+	#name h1 {
+		line-height: .8em;
+		margin-bottom: 4px;
+	}
+}
+
+@media print {
+    #cv {
+        width: 100%;
+    }
+}
