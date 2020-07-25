@@ -40,6 +40,7 @@ table, th, td {
 	max-width: 800px;
 	background: #f3f3f3;
 	margin: 30px auto;
+	border: 5px double black;
 }
 
 .mainDetails {
