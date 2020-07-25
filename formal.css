@@ -64,6 +64,10 @@ th, td{
     padding: 0 40px;
 }
 
+input[type="file"]{
+	display: none;
+}
+
 #profileimg {
 	width: 12.5%;
 	float: right;
@@ -72,9 +76,10 @@ th, td{
 
 #profileimg img {
 	width: 100%;
-	height: auto;
+	height: 90px;
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
+	cursor: pointer;
 }
 
 #name {

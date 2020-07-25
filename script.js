@@ -1,7 +1,19 @@
 let skillId = 'T0', projectId = 'P1', strengthId = 'S0', workshopId = 'W0', achievementId = 'A0';
 
-getDate = () => {
-    document.getElementById("date").innerHTML = (new Date()).toLocaleDateString();
+chooseImage = () => {
+    document.getElementById("imageUpload").click();
+}
+
+replaceImage = (uploader) => {
+    if(uploader.files && uploader.files[0]){
+        var imageFile = uploader.files[0];
+        var reader = new FileReader();    
+        reader.onload = function (e) {
+            //set the image data as source
+            document.getElementById("profileImage").setAttribute('src', e.target.result);
+        }    
+        reader.readAsDataURL( imageFile );
+    }
 }
 
 addTechnicalSkill = () => {
@@ -115,11 +127,14 @@ addSWC = type => {
 }
 
 incrementId = (type, strId) => {
-
     id = parseInt(strId.slice(1, strId.length), 10);
     
     if(type == "strengths") strengthId = strId[0]+ ++id;
     else if(type == "workshops") workshopId = strId[0]+ ++id;
     else if(type == "achievements") achievementId = strId[0]+ ++id;
     else return strId[0]+ ++id ;
+}
+
+getDate = () => {
+    document.getElementById("date").innerHTML = (new Date()).toLocaleDateString();
 }

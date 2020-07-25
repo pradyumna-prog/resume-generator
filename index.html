@@ -25,7 +25,8 @@
 				</div>
 			</div>			
 			<div id="profileimg">
-				<img src="headshot.jpg" alt="" />
+				<img src="headshot.jpg" alt="" onclick="chooseImage()" id="profileImage"/>	
+				<input type="file" id="imageUpload" accept="image/*" onchange="replaceImage(this)">
 			</div>
 			<div class="clear"></div>
 		</div>
