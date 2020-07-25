@@ -1,6 +1,7 @@
 let listItemId = 0;
 
 addTechnicalSkill = () => {
+    const listItem = 
     li = document.createElement('li');
     key = document.getElementById("technicalKey").value;
     values = document.getElementById("technicalValue").value;
@@ -37,5 +38,5 @@ function btnRemoveHandler(event){
 }
 
 addProject = () => {
-    
+    console.log("called")
 }
