@@ -12,10 +12,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 }
 
 html, body {
-	background: #181818; 
+	background: rgb(204,204,204); 
 	font-family: 'Lato', helvetica, arial, sans-serif; 
 	font-size: 16px; 
-    color: #222;
+  color: #222;
 }
 
 .clear {clear: both;}
@@ -32,15 +32,19 @@ table, th, td {
     border-collapse: collapse;
     padding: 3px;
     text-align: center;
-    vertical-align: middle;
+		vertical-align: middle;
+		width: inherit;
+}
+th, td{
+	font-size: smaller;
 }
 
 #cv {
-	width: 90%;
+	width: 100%;
 	max-width: 800px;
 	background: #f3f3f3;
 	margin: 30px auto;
-	border: 5px double black;
+	box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
 }
 
 .mainDetails {
@@ -50,7 +54,7 @@ table, th, td {
 }
 
 #name h2 {
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: 700;
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 	margin-bottom: -6px;
@@ -83,8 +87,8 @@ table, th, td {
 
 #contactDetails ul {
 	list-style-type: none;
-	font-size: 0.9em;
-	margin-top: 2px;
+	font-size: smaller;
+	margin-top: 10px;
 }
 
 #contactDetails ul li {
@@ -93,7 +97,6 @@ table, th, td {
 }
 
 section {
-	border-top: 1px solid #dedede;
 	padding: 20px 0 0;
 }
 
@@ -120,14 +123,13 @@ section:last-child {
 
 .sectionTitle h1 {
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-size: large;
-    color: #000000;
-    font-weight: 550;
+	font-size: normal;
+  color: #000000;
 }
 
 .sectionContent h2 {
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-size: 1.4em;
+	font-size: medium;
 	margin-bottom: -2px;
 }
 
@@ -144,7 +146,7 @@ section:last-child {
 }
 
 .subDetails {
-	font-size: 1em;
+	font-size: smaller;
 	margin-bottom: 3px;
 }
 
@@ -153,7 +155,7 @@ section:last-child {
 	-moz-column-count:1;
 	-webkit-column-count:1;
     column-count:1;
-	font-size: 1em;
+	font-size: smaller;
 	color: #444;
 }
 
@@ -201,10 +203,12 @@ input[type=text]:focus {
 }
 
 @page{
-	size: 8.3in 11.7in;
-	margin: 5px;
+	size: 21cm 29.7cm;
+	margin: 0px;
 }
 
+@media not print{
+	
 @media all and (min-width: 602px) and (max-width: 800px) {
 	#profileimg {
 		display: none;
@@ -238,44 +242,45 @@ input[type=text]:focus {
 		font-size: 1em;
 	}
 	
-    #add{
-        float: none;
-    }
+  #add{
+    float: none;
+  }
     
-    table, thead, tbody, th, td, tr { 
-		display: block; 
-    }
-    /* Hiding table heading*/
-    thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-    }
-    
-    tr { border: 1px solid rgba(33, 33, 33, 0.5); }
-    td { 
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 50%; 
-    }
-    td:before { 
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
-		white-space: nowrap;
-    }
-    td:nth-of-type(1):before { content: "Examination"; }
+  table, thead, tbody, th, td, tr { 
+	display: block; 
+  }
+  /* Hiding table heading*/
+  thead tr { 
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+  }
+  
+  tr { border: 1px solid rgba(33, 33, 33, 0.5); }
+  td { 
+	/* Behave  like a "row" */
+	border: none;
+	border-bottom: 1px solid #eee; 
+	position: relative;
+	padding-left: 50%; 
+  }
+  td:before { 
+	/* Now like a table header */
+	position: absolute;
+	/* Top/left values mimic padding */
+	top: 6px;
+	left: 6px;
+	width: 45%; 
+	padding-right: 10px; 
+	white-space: nowrap;
+  }
+  td:nth-of-type(1):before { content: "Examination"; }
 	td:nth-of-type(2):before { content: "Board/University"; }
 	td:nth-of-type(3):before { content: "School/College"; }
 	td:nth-of-type(4):before { content: "Year of Passing"; }
-    td:nth-of-type(5):before { content: "CGPA/Percentage"; }
-    
+	td:nth-of-type(5):before { content: "CGPA/Percentage"; }
+	
+	
 }
 
 @media all and (max-width: 480px) {
@@ -300,17 +305,14 @@ input[type=text]:focus {
 		margin-bottom: 4px;
 	}
 }
+}
 
 @media print {
-	body * {
-	  visibility: hidden;
+	#cv{
+		width: 21cm;
+		height: 29.7cm;
+		margin: 0;
+		box-shadow: 0 0 0 rgba(0,0,0,0);	
 	}
-	#cv * {
-	  visibility: visible;
-	}
-	#cv {
-	  position: absolute;
-	  left: 0;
-	  top: 0;
-	}
-  }
+
+}  
