@@ -4,6 +4,11 @@ chooseImage = () => {
     document.getElementById("imageUpload").click();
 }
 
+setName = () => {
+    name = document.querySelector("#name h2").innerHTML;
+    document.getElementById("nameFooter").innerHTML = '('+name+')';
+}
+
 replaceImage = (uploader) => {
     if(uploader.files && uploader.files[0]){
         var imageFile = uploader.files[0];

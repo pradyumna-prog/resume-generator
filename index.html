@@ -14,7 +14,7 @@
 	<div id="cv">
 		<div class="mainDetails">
 			<div id="name">
-				<h2 contenteditable="">Your Name</h2>
+				<h2 contenteditable="" onfocusout="setName()">Your Name</h2>
 				<div id="contactDetails">
 					<ul>
 						<li>✉ <span contenteditable="">email-id@domain.com</span></li>
@@ -195,7 +195,7 @@
 									</script>
 								</span>
 							<br/>PLACE: <span id="place" contenteditable="">Dehradun</span>
-							<span contenteditable="" style="float: right;"> (Your Name)</span>
+							<span contenteditable="" style="float: right;" id="nameFooter"> (Your Name)</span>
 					</p>
 					</div>
 				</section>
