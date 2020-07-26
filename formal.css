@@ -227,6 +227,14 @@ input[type=text]:focus {
 	margin: 30px auto;
 	text-align: center;
 }
+.controller img{
+	max-width: 20px;
+	max-height: 20px;
+	vertical-align: middle;
+}
+.controller a{
+	text-decoration: none;
+}
 .controller button{
 	color: black;
 	border: 1px solid #444;
