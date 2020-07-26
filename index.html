@@ -18,9 +18,9 @@
 				<h2 contenteditable="">Your Name</h2>
 				<div id="contactDetails">
 					<ul>
-						<li>📧: <span contenteditable="">email-id@domain.com</span></li>
-						<li>📞: <span contenteditable="">01234567890</span></li>
-						<li>🏠: <span contenteditable="">Enter addreess</span></li>
+						<li>✉ <span contenteditable="">email-id@domain.com</span></li>
+						<li>✆ <span contenteditable="">01234567890</span></li>
+						<li>⌂  <span contenteditable="">Enter addreess</span></li>
 					</ul>
 				</div>
 			</div>			
@@ -102,7 +102,7 @@
 						<h1>Technical Skills</h1>
 					</div>
 					
-					<div class="sectionContent">
+					<div class="sectionContent" id="tecchnicalDiv">
 						<ul class="keySkills" id="technicalSkills"></ul>
 						<input type="text" placeholder="Key" id="technicalKey" />
 						<input type="text" placeholder="Values" id="technicalValue" />
@@ -175,12 +175,12 @@
 						<h1>Perosonal Details</h1>
 					</div>
 					
-					<div class="sectionContent">
-						<ul class="keySkills" id="technicalSkills" style="margin-top: 5px;">
-							<li>◾ Father's Name :<span contenteditable="">Mr.</span></li>
-							<li>◾ Date of Birth : <span contenteditable="">dob</span></li>
-							<li>◾ Languages known :<span contenteditable="">English and Hindi</span></li>
-							<li>◾ Interest and Hobbies : <span contenteditable="">Add Hobbies</span></li>
+					<div class="sectionContent" id="personalDiv">
+						<ul class="keySkills" style="margin-top: 5px;">
+							<li><span>◾ Father's Name </span>:&emsp;<span contenteditable="">Mr.</span></li>
+							<li><span>◾ Date of Birth </span>:&emsp;<span contenteditable="">dob</span></li>
+							<li><span>◾ Languages known </span>:&emsp;<span contenteditable="">English and Hindi</span></li>
+							<li><span>◾ Interest and Hobbies </span>:&emsp;<span contenteditable="">Add Hobbies</span></li>
 						</ul>
 					</div>
 				</section>
@@ -202,6 +202,9 @@
 				</section>
 
 		</div>
+	</div>
+	<div class="controller">
+		<button onclick="toggleControls(this)" >Hide Controls</button>
 	</div>
 </body>
 </html>

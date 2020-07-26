@@ -28,12 +28,12 @@ p {
 }
 
 table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 3px;
-    text-align: center;
-		vertical-align: middle;
-		width: inherit;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
+  text-align: center;
+	vertical-align: middle;
+	width: inherit;
 }
 th, td{
 	font-size: smaller;
@@ -49,7 +49,7 @@ th, td{
 
 .mainDetails {
 	padding: 25px 35px;
-	border-bottom: 2px solid #cf8a05;
+	border-bottom: 2px solid #222;
 	background: #ededed;
 }
 
@@ -146,8 +146,24 @@ section:last-child {
 .sectionContent input {
     width: 40%;
 }
+
 .sectionContent button{
     width: fit-content;
+}
+
+#technicalSkills li span{
+	width: 50%;
+	display: inline-block;
+}
+
+#strengthsValue, #workshopsValue, #achievementsValue{
+	width: 90%;
+	display: inline-block;
+}
+
+#personalDiv span{
+	width: 48%;
+	display: inline-block;
 }
 
 .subDetails {
@@ -175,7 +191,6 @@ section:last-child {
     float: right;
 }
 
-
 input[type=text]{
     margin-top: 3px;
     outline: none;
@@ -200,11 +215,27 @@ input[type=text]:focus {
     color:white;
     background-color: green;
 }
+
 .placeNameContainer p{
 	float: left;
 }
 .placeNameContainer span{
 	float: right;
+}
+
+.controller{
+	margin: 30px auto;
+	text-align: center;
+}
+.controller button{
+	color: black;
+	border: 1px solid #444;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.controller button:hover{
+	color: white;
+	background-color: #444;
 }
 
 @page{
@@ -214,13 +245,10 @@ input[type=text]:focus {
 
 @media not print{
 	
-@media all and (min-width: 602px) and (max-width: 800px) {
+@media all and (max-width: 601px) {
 	#profileimg {
 		display: none;
     }
-}
-
-@media all and (max-width: 601px) {
 	#cv {
 		width: 95%;
 		margin: 10px auto;
@@ -320,4 +348,7 @@ input[type=text]:focus {
 		box-shadow: 0 0 0 rgba(0,0,0,0);	
 	}
 
+	.controller{
+		display: none;
+	}
 }  

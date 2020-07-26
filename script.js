@@ -8,8 +8,7 @@ replaceImage = (uploader) => {
     if(uploader.files && uploader.files[0]){
         var imageFile = uploader.files[0];
         var reader = new FileReader();    
-        reader.onload = function (e) {
-            //set the image data as source
+        reader.onload = (e) => {
             document.getElementById("profileImage").setAttribute('src', e.target.result);
         }    
         reader.readAsDataURL( imageFile );
@@ -27,9 +26,14 @@ addTechnicalSkill = () => {
     document.getElementById("technicalValue").value = "";
 
     span = document.createElement("span");
-    span.innerHTML = '◾ ' + key + " : " + values;
+    span.innerHTML = '◾ ' + key;
     span.setAttribute('contenteditable', '');
     li.appendChild(span)
+
+    span2 = document.createElement("span");
+    span2.innerHTML = " : " + values;
+    span2.setAttribute('contenteditable', '');
+    li.appendChild(span2)
 
     btnRemove = document.createElement('button');
     btnRemove.innerHTML = 'X';
@@ -137,4 +141,17 @@ incrementId = (type, strId) => {
 
 getDate = () => {
     document.getElementById("date").innerHTML = (new Date()).toLocaleDateString();
+}
+
+toggleControls = (clicker) => {
+    document.querySelectorAll("#add").forEach(btn => {
+        btn.style.visibility = btn.style.visibility == 'hidden' ? 'visible' : 'hidden';
+    });
+
+    document.querySelectorAll(".btnRemove").forEach(btnRemove => {
+        btnRemove.style.visibility = btnRemove.style.visibility == 'hidden' ? 'visible' : 'hidden';
+    });
+
+    clicker.innerHTML = clicker.innerHTML == 'Hide Controls' ? 'Show Controls' : 'Hide Controls';
+
 }
