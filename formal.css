@@ -254,23 +254,24 @@ input[type=text]:focus {
 @media not print{
 	
 @media all and (max-width: 601px) {
-	#profileimg {
-		display: none;
-    }
 	#cv {
 		width: 95%;
 		margin: 10px auto;
 		min-width: 280px;
 	}
 	
-	#profileimg {
-		display: none;
+	#profileimg img{
+		width: 50px;
+		max-height: 50px;
 	}
 	
 	#name, #contactDetails {
-		float: none;
-		width: 100%;
-		text-align: center;
+		float: left;
+		font-size: 0.7em;
+		width: 70%;
+	}
+	#contactDetails ul{
+		font-size: x-small;
 	}
 	
 	.sectionTitle, .sectionContent {
