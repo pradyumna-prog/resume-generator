@@ -31,7 +31,7 @@ addTechnicalSkill = () => {
     li.appendChild(span)
 
     span2 = document.createElement("span");
-    span2.innerHTML = + values;
+    span2.innerHTML = values;
     span2.setAttribute('contenteditable', '');
     li.appendChild(span2)
 
