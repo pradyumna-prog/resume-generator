@@ -1,4 +1,5 @@
 let skillId = 'T0', projectId = 'P1', strengthId = 'S0', workshopId = 'W0', achievementId = 'A0';
+const fontValues = ['0px','xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large'];
 
 chooseImage = () => {
     document.getElementById("imageUpload").click();
@@ -160,3 +161,11 @@ toggleControls = (clicker) => {
     clicker.innerHTML = clicker.innerHTML == 'Hide Controls' ? 'Show Controls' : 'Hide Controls';
 
 }
+
+changeFont = (val) => {
+    document.querySelectorAll('.sectionContent').forEach(element => {
+        element.style.fontSize = (val/5+'px');
+    });
+}
+
+//rangeV.innerHTML = `<span>${val}</span>`;

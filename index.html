@@ -85,7 +85,7 @@
 
 				<section>
 					<div class="sectionTitle">
-						<h1>Subjects of Interest</h1>
+						<h1>Fields of Interest</h1>
 					</div>	
 					<div class="sectionContent">
 						<ul class="keySkills" style="-moz-column-count:2; -webkit-column-count:2; column-count:2;">
@@ -136,7 +136,7 @@
 					</div>
 					
 					<div class="sectionContent">
-						<ul class="keySkills" id="strengths"></ul>
+						<ul class="keySkills" id="strengths" style="-moz-column-count:2; -webkit-column-count:2; column-count:2;"></ul></ul>
 						<input type="text" placeholder="Enter strength" id="strengthsValue" class="controls"/>
 						<button onclick="addSWC('strengths')" id="add" class="controls">Add</button>
 					</div>
@@ -176,10 +176,9 @@
 					
 					<div class="sectionContent" id="personalDiv">
 						<ul class="keySkills" style="margin-top: 5px;">
-							<li><span>◾ Father's Name </span><span contenteditable="">Mr. </span></li>
-							<li><span>◾ Date of Birth </span><span contenteditable="">dd/mm/yyyy</span></li>
+							<li><span>◾ Father's Name </span><span contenteditable="">Mr.&nbsp;</span></li>
+							<li><span>◾ Date of Birth </span><span contenteditable="">mm/dd/yyyy</span></li>
 							<li><span>◾ Languages known </span><span contenteditable="">English and Hindi</span></li>
-							<li><span>◾ Interest and Hobbies </span><span contenteditable="">Add Hobbies</span></li>
 						</ul>
 					</div>
 				</section>
@@ -203,14 +202,19 @@
 		</div>
 	</div>
 	<div class="controller">
+		<div class="slider_wrap">
+			<input class="slider_range" type="range" min="1" value="65" oninput="changeFont(this.value)" />
+		</div>
+		
 		<a href="https://www.linkedin.com/in/pradyumna-prog/" target="_BLANK">
 			<img src="imgs/linkedin-dark.png" alt="linkedin.com" title="Pradyumna Tripathi | LinkedIn">
 		</a>
-		<button onclick="toggleControls(this)" >Hide Controls</button>
+		<button onclick="toggleControls(this)">Hide Controls</button>
 		<button onclick="window.print()">Print this page</button>
 		<a href="https://www.github.com/pradyumna-prog/" target="_BLANK">
 			<img src="imgs/github-dark.png" alt="github.com" title="Pradyumna Tripathi | GitHub">
 		</a>
+		
 	</div>
 </body>
 </html>
