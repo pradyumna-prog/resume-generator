@@ -104,9 +104,9 @@
 					
 					<div class="sectionContent" id="tecchnicalDiv">
 						<ul class="keySkills" id="technicalSkills"></ul>
-						<input type="text" placeholder="Key" id="technicalKey" />
-						<input type="text" placeholder="Values" id="technicalValue" />
-						<button onclick="addTechnicalSkill()" id="add">Add</button>
+						<input type="text" placeholder="Key" id="technicalKey" class="controls"/>
+						<input type="text" placeholder="Values" id="technicalValue" class="controls"/>
+						<button onclick="addTechnicalSkill()" id="add" class="controls">Add</button>
 					</div>
 					<div class="clear"></div>
 				</section>
@@ -118,7 +118,7 @@
 					<div class="sectionContent" id="projectDetails">
 						<article id="P0">
 							<h2 contenteditable="">Project Title</h2>
-							<button id = "P0" class="btnRemove" onclick="btnRemoveHandler(event)">X</button>
+							<button id = "P0" class="btnRemove" onclick="btnRemoveHandler(event)" class="controls">X</button>
 							<p class="subDetails">
 								Technologies: <span contenteditable="">add</span> |
 								Role: <span contenteditable="">add</span> |
@@ -127,7 +127,7 @@
 							<p contenteditable="" class="subDetails">Add description</p>
 						</article>
 					</div>
-					<button onclick="addProject()" id="add">Add</button>
+					<button onclick="addProject()" id="add" class="controls">Add</button>
 					<div class="clear"></div>
 				</section>
 	
@@ -138,8 +138,8 @@
 					
 					<div class="sectionContent">
 						<ul class="keySkills" id="strengths"></ul>
-						<input type="text" placeholder="Enter strength" id="strengthsValue" />
-						<button onclick="addSWC('strengths')" id="add">Add</button>
+						<input type="text" placeholder="Enter strength" id="strengthsValue" class="controls"/>
+						<button onclick="addSWC('strengths')" id="add" class="controls">Add</button>
 					</div>
 					<div class="clear"></div>
 				</section>
@@ -151,8 +151,8 @@
 					
 					<div class="sectionContent">
 						<ul class="keySkills" id="workshops"></ul>
-						<input type="text" placeholder="Enter Workshop/Certification" id="workshopsValue" />
-						<button onclick="addSWC('workshops')" id="add">Add</button>
+						<input type="text" placeholder="Enter Workshop/Certification" id="workshopsValue" class="controls"/>
+						<button onclick="addSWC('workshops')" id="add" class="controls">Add</button>
 					</div>
 					<div class="clear"></div>
 				</section>
@@ -164,8 +164,8 @@
 					
 					<div class="sectionContent">
 						<ul class="keySkills" id="achievements"></ul>
-						<input type="text" placeholder="Enter Achievements" id="achievementsValue" />
-						<button onclick="addSWC('achievements')" id="add">Add</button>
+						<input type="text" placeholder="Enter Achievements" id="achievementsValue" class="controls"/>
+						<button onclick="addSWC('achievements')" id="add" class="controls">Add</button>
 					</div>
 					<div class="clear"></div>
 				</section>
@@ -177,10 +177,10 @@
 					
 					<div class="sectionContent" id="personalDiv">
 						<ul class="keySkills" style="margin-top: 5px;">
-							<li><span>◾ Father's Name </span>:&emsp;<span contenteditable="">Mr.</span></li>
-							<li><span>◾ Date of Birth </span>:&emsp;<span contenteditable="">dob</span></li>
-							<li><span>◾ Languages known </span>:&emsp;<span contenteditable="">English and Hindi</span></li>
-							<li><span>◾ Interest and Hobbies </span>:&emsp;<span contenteditable="">Add Hobbies</span></li>
+							<li><span>◾ Father's Name </span><span contenteditable="">Mr.</span></li>
+							<li><span>◾ Date of Birth </span><span contenteditable="">dob</span></li>
+							<li><span>◾ Languages known </span><span contenteditable="">English and Hindi</span></li>
+							<li><span>◾ Interest and Hobbies </span><span contenteditable="">Add Hobbies</span></li>
 						</ul>
 					</div>
 				</section>

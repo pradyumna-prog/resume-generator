@@ -31,7 +31,7 @@ addTechnicalSkill = () => {
     li.appendChild(span)
 
     span2 = document.createElement("span");
-    span2.innerHTML = " : " + values;
+    span2.innerHTML = + values;
     span2.setAttribute('contenteditable', '');
     li.appendChild(span2)
 
@@ -144,12 +144,12 @@ getDate = () => {
 }
 
 toggleControls = (clicker) => {
-    document.querySelectorAll("#add").forEach(btn => {
-        btn.style.visibility = btn.style.visibility == 'hidden' ? 'visible' : 'hidden';
+    document.querySelectorAll(".controls").forEach(btn => {
+        btn.style.display = btn.style.display == 'none' ? '' : 'none';
     });
 
     document.querySelectorAll(".btnRemove").forEach(btnRemove => {
-        btnRemove.style.visibility = btnRemove.style.visibility == 'hidden' ? 'visible' : 'hidden';
+        btnRemove.style.display = btnRemove.style.display == 'none' ? '' : 'none';
     });
 
     clicker.innerHTML = clicker.innerHTML == 'Hide Controls' ? 'Show Controls' : 'Hide Controls';
