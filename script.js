@@ -39,19 +39,25 @@ addTechnicalSkill = () => {
     span = document.createElement("span");
     span.innerHTML = '◾ ' + key;
     span.setAttribute('contenteditable', '');
-    li.appendChild(span)
+    span.setAttribute('id', 'span1');
+    li.appendChild(span);
 
     span2 = document.createElement("span");
     span2.innerHTML = values;
     span2.setAttribute('contenteditable', '');
-    li.appendChild(span2)
-
+    span2.setAttribute('id', 'span2');
+    li.appendChild(span2);
+    
     btnRemove = document.createElement('button');
     btnRemove.innerHTML = 'X';
     btnRemove.setAttribute('id',skillId);
     btnRemove.setAttribute('class', 'btnRemove');
     btnRemove.addEventListener('click', btnRemoveHandler);
-    li.appendChild(btnRemove);
+    
+    span3 = document.createElement("span");
+    span3.setAttribute('style', 'width:0%');
+    span3.appendChild(btnRemove);
+    li.appendChild(span3);
 
     ul = document.querySelector("#technicalSkills");
     ul.style.marginTop = '5px';
@@ -95,6 +101,7 @@ addProject = () => {
 
     descripton = document.createElement('p');
     descripton.setAttribute('contenteditable','');
+    descripton.setAttribute('class', 'subDetails');
     descripton.innerHTML = "Add description";
 
     article.appendChild(h2);

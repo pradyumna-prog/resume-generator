@@ -1,14 +1,14 @@
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
-    border:0;
-    font:inherit;
-    font-size:100%;
-    margin:0;
-    padding:0;
-    vertical-align:baseline;
+  border:0;
+  font:inherit;
+  font-size:100%;
+  margin:0;
+  padding:0;
+  vertical-align:baseline;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
-    display:block;
+  display:block;
 }
 
 html, body {
@@ -46,7 +46,7 @@ th, td{
 	background: #f3f3f3;
 	margin: 30px auto;
 	border: 5px double black;
-	overflow: hidden;
+	overflow-y: scroll;
 }
 
 .mainDetails {
@@ -195,6 +195,7 @@ section:last-child {
   border: 0px solid black;
   cursor: pointer;
 	float: right;
+	background-color: transparent;
 }
 
 input[type=text]{
@@ -271,7 +272,7 @@ input[type=text]:focus {
 
 @page{
 	size: 21cm 29.7cm;
-	margin: 0px;
+	margin-bottom: 0.5in;
 }
 
 @media not print{
@@ -313,33 +314,33 @@ input[type=text]:focus {
 	}
   
   table, thead, tbody, th, td, tr { 
-	display: block; 
+		display: block; 
   }
   /* Hiding table heading*/
   thead tr { 
-	position: absolute;
-	top: -9999px;
-	left: -9999px;
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
   }
   
   tr { border: 1px solid rgba(33, 33, 33, 0.5); }
   td { 
-	/* Behave  like a "row" */
-	border: none;
-	border-bottom: 1px solid #eee; 
-	position: relative;
-	padding-left: 50%; 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
 	}
 	
   td:before { 
-	/* Now like a table header */
-	position: absolute;
-	/* Top/left values mimic padding */
-	top: 6px;
-	left: 6px;
-	width: 45%; 
-	padding-right: 10px; 
-	white-space: nowrap;
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
   }
   td:nth-of-type(1):before { content: "Examination"; }
 	td:nth-of-type(2):before { content: "Board/University"; }
@@ -370,8 +371,9 @@ input[type=text]:focus {
 		line-height: .8em;
 		margin-bottom: 4px;
 	}
-	#technicalSkills li span{
-		width: 30%;
+
+	#technicalSkills li #span1, #technicalSkills li #span2{
+		width: 50%;
 		display: inline-block;
 	}
 	
@@ -390,10 +392,11 @@ input[type=text]:focus {
 @media print {
 	#cv{
 		width: 21cm;
-		height: 29.7cm;
+		height: auto;
 		margin: 0;
 		box-shadow: 0 0 0 rgba(0,0,0,0);
 		border: 0px solid black;	
+		overflow: hidden;
 	}
 	.controller{
 		display: none;
