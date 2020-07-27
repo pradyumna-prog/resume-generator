@@ -185,3 +185,42 @@ changeFont = (val) => {
         element.style.fontSize = val+'px';
 	});
 }
+
+let clearFlag = false;
+
+storeCurrentData = () => {
+	if(sessionStorage != 'undefined'){
+		sessionStorage.removeItem('mycv.io\\session');
+		sessionStorage.setItem('mycv.io\\session', document.body.innerHTML);
+	}
+}
+
+loadPreviousData = () => {
+	if(sessionStorage != 'undefined' && localStorage != 'undefined'){
+		if(sessionStorage.getItem('mycv.io\\sesssion') != null){
+			document.body.innerHTML = sessionStorage.getItem('mycv.io\\session');
+		}
+		else if(localStorage.getItem('mycv.io\\local') != null){
+			document.body.innerHTML = localStorage.getItem('mycv.io\\local');
+		}
+	}
+}
+
+manageStorage = () => {
+	if(localStorage != 'undefined'){
+		localStorage.removeItem('mycv.io\\local');
+		if(clearFlag == false){
+			localStorage.setItem('mycv.io\\local', document.body.innerHTML);
+		}
+	}
+}
+
+clearStorage = () => {
+	clearFlag = true;
+	if(localStorage != 'undefined'){
+		localStorage.clear();
+	}
+	if(sessionStorage != 'undefined'){
+		sessionStorage.clear();
+	}
+}

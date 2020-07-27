@@ -11,7 +11,7 @@
 		<script src = "script.js"></script>
 		<title>MyCV</title>
 </head>
-<body>
+<body onload="loadPreviousData()" onbeforeunload="manageStorage()">
 	<div id="cv">
 		<div class="mainDetails">
 			<div id="name">
@@ -214,11 +214,14 @@
 		</a>
 		<button onclick="toggleControls(this)">Hide Controls</button>
 		<button onclick="changeFont('default')">Default Size</button>
+		<button onclick="clearStorage()">Clear Cache</button>
 		<button onclick="window.print()">Print Resume</button>
 		<a href="https://www.github.com/pradyumna-prog/" target="_BLANK">
 			<img src="imgs/github-dark.png" alt="github.com" title="Pradyumna Tripathi | GitHub">
 		</a>
-		
 	</div>
 </body>
 </html>
+<script>
+	setInterval( () => {storeCurrentData()} , 40000);
+</script>
