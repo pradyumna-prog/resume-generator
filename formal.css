@@ -24,7 +24,6 @@ p {
 	font-size: 1em;
 	line-height: 1.4em;
 	margin-bottom: 20px;
-	color: #444;
 }
 
 table, th, td {
@@ -116,16 +115,16 @@ section:last-child {
 }
 
 .sectionTitle {
-    width: 100%;
-    display: block;
-    background-color: #bfbfbf;
+  width: 100%;
+  display: block;
+  background-color: #bfbfbf;
 }
 
 .sectionContent {
-    width: 100%;
-    display: block;
-    font-size: small;
-    margin-top: 5px;
+  width: 100%;
+  display: block;
+  font-size: small;
+  margin-top: 5px;
 }
 
 .sectionTitle h1 {
@@ -140,7 +139,8 @@ section:last-child {
 
 .sectionContent h2 {
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-size: medium;
+	font-size: 13px;
+	font-weight: 600;
 	margin-bottom: -2px;
 }
 
