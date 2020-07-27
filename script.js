@@ -163,10 +163,7 @@ toggleControls = (clicker) => {
     const contactDetails = document.getElementById('contactDetails');
 
     if(profileImage.getAttribute('src') == "imgs/headshot.jpg"){
-        profileImage.style.display = profileImage.style.display == 'none' ? '' : 'none';
-        contactDetails.style.float = name.style.float = (name.style.float == 'left') ? 'none' : 'left';
-        contactDetails.style.width =  name.style.width = '100%';
-        contactDetails.style.textAlign = name.style.textAlign = 'center';
+        profileImage.style.display = profileImage.style.display == 'none' ? '' : 'none';    
     }
 
     document.querySelectorAll(".controls").forEach(btn => {
