@@ -7,6 +7,7 @@
 
 		<link type="text/css" rel="stylesheet" 	href="formal.css">
 		<link rel="shortcut icon" href="imgs/cvmaker.ico">
+
 		<script src = "script.js"></script>
 		<title>MyCV</title>
 </head>
@@ -48,12 +49,14 @@
 								</tr>
 								</thead>
 								<tbody>
-								<tr>
+								<tr id="PG">
 									<td contenteditable="">MCA</td>
 									<td contenteditable="">Graphic Era University, Dehradun</td>
 									<td contenteditable="">Graphic Era University, Dehradun</td>
 									<td contenteditable="">202X</td>
-									<td contenteditable="">0.00</td>
+									<td contenteditable="">0.00
+										<button id = "PG" class="btnRemove" onclick="btnRemoveHandler(event)" class="controls">X</button>
+									</td>
 								</tr>
 								<tr>
 									<td contenteditable="">BCA</td>
@@ -210,7 +213,8 @@
 			<img src="imgs/linkedin-dark.png" alt="linkedin.com" title="Pradyumna Tripathi | LinkedIn">
 		</a>
 		<button onclick="toggleControls(this)">Hide Controls</button>
-		<button onclick="window.print()">Print this page</button>
+		<button onclick="changeFont('default')">Default Size</button>
+		<button onclick="window.print()">Print Resume</button>
 		<a href="https://www.github.com/pradyumna-prog/" target="_BLANK">
 			<img src="imgs/github-dark.png" alt="github.com" title="Pradyumna Tripathi | GitHub">
 		</a>

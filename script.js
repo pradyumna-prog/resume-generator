@@ -21,6 +21,11 @@ replaceImage = (uploader) => {
     }
 }
 
+btnRemoveHandler = event => {
+    document.getElementById(event['target']['id']).remove();
+}
+
+
 addTechnicalSkill = () => {
     li = document.createElement('li');
     li.setAttribute('id',skillId);
@@ -53,10 +58,6 @@ addTechnicalSkill = () => {
     ul.appendChild(li);
 
     skillId = incrementId("technical", skillId);
-}
-
-btnRemoveHandler = event => {
-    document.getElementById(event['target']['id']).remove();
 }
 
 addProject = () => {
@@ -163,7 +164,9 @@ toggleControls = (clicker) => {
 }
 
 changeFont = (val) => {
+	val == 'default' ? val = '13' : val = (val/5);
+	
     document.querySelectorAll('.sectionContent').forEach(element => {
-        element.style.fontSize = (val/5+'px');
-    });
+        element.style.fontSize = val+'px';
+	});
 }
