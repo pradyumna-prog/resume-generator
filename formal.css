@@ -83,11 +83,7 @@ input[type="file"]{
 	cursor: pointer;
 }
 
-#name {
-	float: left;
-}
-
-#contactDetails {
+#name, #contactDetails {
 	float: left;
 }
 

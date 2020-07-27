@@ -1,6 +1,5 @@
 let skillId = 'T0', projectId = 'P1', strengthId = 'S0', workshopId = 'W0', achievementId = 'A0';
 
-
 chooseImage = () => {
     document.getElementById("imageUpload").click();
 }
@@ -158,6 +157,18 @@ getDate = () => {
 }
 
 toggleControls = (clicker) => {
+
+    const profileImage = document.getElementById("profileImage");
+    const name = document.getElementById('name');
+    const contactDetails = document.getElementById('contactDetails');
+
+    if(profileImage.getAttribute('src') == "imgs/headshot.jpg"){
+        profileImage.style.display = profileImage.style.display == 'none' ? '' : 'none';
+        contactDetails.style.float = name.style.float = (name.style.float == 'left') ? 'none' : 'left';
+        contactDetails.style.width =  name.style.width = '100%';
+        contactDetails.style.textAlign = name.style.textAlign = 'center';
+    }
+
     document.querySelectorAll(".controls").forEach(btn => {
         btn.style.display = btn.style.display == 'none' ? '' : 'none';
     });
