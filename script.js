@@ -188,12 +188,17 @@ checkboxClickHandler = (cid, fid) => {
 }
 
 changeFont = (val) => {
-	console.log(val);
-	val == 'default' ? val = '16' : val = (val/5);
+    val == 'default' ? val = '16' : val = (val/5);
+
+    if(val == '16'){
+        document.querySelector('.slider_range').value = '80';
+    }
 	
     document.querySelectorAll('.sectionContent').forEach(element => {
         element.style.fontSize = val+'px';
-	});
+    });
+    
+    
 }
 
 let clearFlag = false;
