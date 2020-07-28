@@ -119,7 +119,7 @@ section:last-child {
 .sectionContent {
   width: 100%;
   display: block;
-  font-size: small;
+  font-size: medium;
   margin-top: 5px;
 }
 
@@ -264,6 +264,38 @@ input[type=text]:focus {
 	width: 70%;
 }
 
+.checkBox{
+	width: 70%;
+	max-width: 500px;
+	margin: 30px auto;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+}
+
+.checkBox label {
+	cursor: pointer;
+}
+
+.checkBox input[type="checkbox"] {
+	cursor: pointer;
+	float: left;
+}
+
+.buttons{
+	width: 70%;
+	height: 40px;
+	max-width: 500px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(6, auto);
+}
+.mobile{
+	display: none;
+}
+a img{
+	position: relative;
+	top: 4px;
+}
 
 @page{
 	size: 21cm 29.7cm;
@@ -304,10 +336,13 @@ input[type=text]:focus {
 		font-size: 1em;
 	}
 	
-  #add{
-    float: none;
+  	#add{
+    	float: none;
 	}
-  
+	.checkBox{
+		grid-template-columns: repeat(1, auto);
+	}
+	
   table, thead, tbody, th, td, tr { 
 		display: block; 
   }
@@ -383,12 +418,21 @@ input[type=text]:focus {
 	.controller{
 		width: 70%;
 	}
-	.controller button{
-		width: 20%;
-		font-size: x-small;
-		display: inline-block;
+	.buttons{
+		width: 50%;
+		height: unset;
+		grid-template-columns: repeat(2, auto);
 	}
-
+	.mobile{
+		display: unset;
+	}
+	.laptop{
+		display: none;
+	}
+	a img{
+		top: unset;
+	}
+	
 }
 }
 

@@ -157,7 +157,6 @@ getDate = () => {
 }
 
 toggleControls = (clicker) => {
-
     const profileImage = document.getElementById("profileImage");
     const name = document.getElementById('name');
     const contactDetails = document.getElementById('contactDetails');
@@ -178,8 +177,19 @@ toggleControls = (clicker) => {
 
 }
 
+toggleField = (id) => {
+	document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? '' : 'none';
+	
+}
+
+checkboxClickHandler = (cid, fid) => {
+	document.getElementById(cid).checked = !document.getElementById(cid).checked;
+	toggleField(fid);
+}
+
 changeFont = (val) => {
-	val == 'default' ? val = '13' : val = (val/5);
+	console.log(val);
+	val == 'default' ? val = '16' : val = (val/5);
 	
     document.querySelectorAll('.sectionContent').forEach(element => {
         element.style.fontSize = val+'px';

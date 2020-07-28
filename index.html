@@ -13,12 +13,12 @@
 		<script src = "script.js"></script>
 		<title>MyCV</title>
 </head>
-<body onload="loadPreviousData()" onbeforeunload="storeCurrentData()">
+<body> <!--onload="loadPreviousData()" onbeforeunload="storeCurrentData()">-->
 	<div id="cv">
 		<div class="mainDetails">
 			<div id="name">
 				<h2 contenteditable="" onfocusout="setName()">Your Name</h2>
-				<div id="contactDetails">
+				<div id="contactDetails" class="sectionContent">
 					<ul>
 						<li>✉ <span contenteditable="">email-id@domain.com</span></li>
 						<li>✆ +91-<span contenteditable="">1234567890</span></li>
@@ -34,7 +34,7 @@
 		</div>
 				
 		<div id="mainArea">
-				<section>
+				<section id="academicHead">
 					<article>
 						<div class="sectionTitle">
 							<h1>Academic Details</h1>
@@ -88,7 +88,7 @@
 				<div class="clear"></div>
 				</section>
 
-				<section>
+				<section id="fieldOfInterestHead">
 					<div class="sectionTitle">
 						<h1>Fields of Interest</h1>
 					</div>	
@@ -101,7 +101,7 @@
 					<div class="clear"></div>
 				</section>
 
-				<section>
+				<section id="techSkillsHead">
 					<div class="sectionTitle">
 						<h1>Technical Skills</h1>
 					</div>
@@ -115,7 +115,7 @@
 					<div class="clear"></div>
 				</section>
 
-				<section>
+				<section id="projectHead">
 					<div class="sectionTitle">
 						<h1>Projects</h1>
 					</div>
@@ -135,7 +135,7 @@
 					<div class="clear"></div>
 				</section>
 	
-				<section>
+				<section id="strengthHead">
 					<div class="sectionTitle">
 						<h1>Strengths</h1>
 					</div>
@@ -148,7 +148,7 @@
 					<div class="clear"></div>
 				</section>
 
-				<section>
+				<section id="workshopHead">
 					<div class="sectionTitle">
 						<h1>Workshop/Certification</h1>
 					</div>
@@ -161,7 +161,7 @@
 					<div class="clear"></div>
 				</section>
 
-				<section>
+				<section id="achievementHead">
 					<div class="sectionTitle">
 						<h1>Achievements</h1>
 					</div>
@@ -174,7 +174,7 @@
 					<div class="clear"></div>
 				</section>
 
-				<section>
+				<section id="personalDetailHead">
 					<div class="sectionTitle">
 						<h1>Perosonal Details</h1>
 					</div>
@@ -188,12 +188,12 @@
 					</div>
 				</section>
 
-				<section>
+				<section id="declarationHead">
 					<div class="sectionTitle">
 						<h1>Declaration</h1>
 					</div>
 					<div class="sectionContent">
-						<p>I hereby declare that the above mentioned information is correct up to my knowledge.
+						<p class="subDetails">I hereby declare that the above mentioned information is correct up to my knowledge.
 							<br/><br/>DATE: <span id="date" contenteditable=""><script>
 										document.getElementById("date").innerHTML = (new Date()).toLocaleDateString()
 									</script>
@@ -208,22 +208,42 @@
 	</div>
 	<div class="controller">
 		<div class="slider_wrap">
-			<input class="slider_range" type="range" min="1" value="65" oninput="changeFont(this.value)" />
+			<input class="slider_range" type="range" min="1" value="80" oninput="changeFont(this.value)" />
+		</div>
+		<div class="checkBox">
+			<span>
+				<input type="checkbox" id="c0" onchange="toggleField('fieldOfInterestHead')" checked/>
+				<label for="Fields of Interest" onclick="checkboxClickHandler('c0','fieldOfInterestHead')">Fields of Interest</label>
+			</span>
+			<span>
+				<input type="checkbox" id="c1" onchange="toggleField('workshopHead')" checked/>
+				<label for="Workshops" onclick="checkboxClickHandler('c1','workshopHead')">Workshop/Certification</label>
+			</span>
+			<span>
+				<input type="checkbox" id="c2" onchange="toggleField('achievementHead')" checked/>
+				<label for="Achievements" onclick="checkboxClickHandler('c2','achievementHead')">Achievements</label>
+			</span>
 		</div>
 		<div class="buttons">
+			<a href="https://www.github.com/pradyumna-prog/" target="_BLANK" class="laptop">
+				<img src="imgs/github-dark.png" alt="github.com" title="Pradyumna Tripathi | GitHub">
+			</a>	
 			<button onclick="toggleControls(this)">Hide Controls</button>
 			<button onclick="changeFont('default')">Default Size</button>
 			<button onclick="clearStorage()">Clear Cache</button>
 			<button onclick="window.print()">Print Resume</button>
+			<a href="https://www.linkedin.com/in/pradyumna-prog/" target="_BLANK"class="laptop">
+				<img src="imgs/linkedin-dark.png" alt="linkedin.com" title="Pradyumna Tripathi | LinkedIn">
+			</a>
+			<a href="https://www.github.com/pradyumna-prog/" target="_BLANK" class="mobile">
+				<br>
+				<img src="imgs/github-dark.png" alt="github.com" title="Pradyumna Tripathi | GitHub">
+			</a>	
+			<a href="https://www.linkedin.com/in/pradyumna-prog/" target="_BLANK"class="mobile">
+				<br>
+				<img src="imgs/linkedin-dark.png" alt="linkedin.com" title="Pradyumna Tripathi | LinkedIn">
+			</a>
 		</div>
-		<br>
-		<a href="https://www.github.com/pradyumna-prog/" target="_BLANK">
-			<img src="imgs/github-dark.png" alt="github.com" title="Pradyumna Tripathi | GitHub">
-		</a>
-		<a href="https://www.linkedin.com/in/pradyumna-prog/" target="_BLANK">
-			<img src="imgs/linkedin-dark.png" alt="linkedin.com" title="Pradyumna Tripathi | LinkedIn">
-		</a>
-	
 	</div>
 </body>
 </html>
