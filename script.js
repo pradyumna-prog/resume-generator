@@ -91,12 +91,21 @@ addProject = () => {
 
     subdetailPara = document.createElement('p');
     subdetailPara.setAttribute('class', 'subDetails');
-    subdetailPara.innerHTML = "Technologies :";
-    subdetailPara.appendChild(spanT);
-    subdetailPara.innerHTML += " | Role :";
-    subdetailPara.appendChild(spanR);
-    subdetailPara.innerHTML += " | Duration :";
-    subdetailPara.appendChild(spanD);
+
+    st = document.createElement('span'); st.setAttribute('id', 'st');
+    st.innerHTML = "Technologies :";
+    st.appendChild(spanT);
+    subdetailPara.appendChild(st);
+    
+    sr = document.createElement('span'); sr.setAttribute('id', 'sr');
+    sr.innerHTML += "Role :";
+    sr.appendChild(spanR)
+    subdetailPara.appendChild(sr);
+
+    sd = document.createElement('span'); sd.setAttribute('id', 'sd');
+    sd.innerHTML += "Duration :";
+    sd.appendChild(spanD);
+    subdetailPara.appendChild(sd);
 
     descripton = document.createElement('p');
     descripton.setAttribute('contenteditable','');
@@ -158,9 +167,6 @@ getDate = () => {
 
 toggleControls = (clicker) => {
     const profileImage = document.getElementById("profileImage");
-    const name = document.getElementById('name');
-    const contactDetails = document.getElementById('contactDetails');
-
     if(profileImage.getAttribute('src') == "imgs/headshot.jpg"){
         profileImage.style.display = profileImage.style.display == 'none' ? '' : 'none';    
     }
@@ -173,13 +179,28 @@ toggleControls = (clicker) => {
         btnRemove.style.display = btnRemove.style.display == 'none' ? '' : 'none';
     });
 
-    clicker.innerHTML = clicker.innerHTML == 'Hide Controls' ? 'Show Controls' : 'Hide Controls';
+    clicker.innerHTML = clicker.innerHTML == 'Hide Editor' ? 'Show Editor' : 'Hide Editor';
 
 }
 
 toggleField = (id) => {
-	document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? '' : 'none';
+    let x = '';
+    if(id == 'st' || id =='sr' || id =='sd'){
+        if(document.getElementById(id).style.display == ''){ x = 'none';}
+        document.querySelectorAll(`#${id}`).forEach(field => {
+            field.style.display = x;
+        });
+    }
+    else{
+        document.getElementById(id).style.display = 
+        document.getElementById(id).style.display == 'none' ? '' : 'none';
+    }
 	
+}
+
+printResume = () => {
+    toggleControls(document.getElementById('hideControls'))
+    window.print()
 }
 
 checkboxClickHandler = (cid, fid) => {
@@ -188,17 +209,21 @@ checkboxClickHandler = (cid, fid) => {
 }
 
 changeFont = (val) => {
-    val == 'default' ? val = '16' : val = (val/5);
-
-    if(val == '16'){
+    size = `${val/5}px`;
+    if(size == '16px'){
         document.querySelector('.slider_range').value = '80';
     }
-	
     document.querySelectorAll('.sectionContent').forEach(element => {
-        element.style.fontSize = val+'px';
+        element.style.fontSize = size;
     });
     
-    
+    document.querySelector('.slider_value').innerHTML = size;
+}
+
+toggleMenu = () => {
+    document.querySelector('.slider_wrap').classList.toggle('hidden');
+    document.querySelector('.checkBox').classList.toggle('hidden');
+    document.querySelector('.buttons').classList.toggle('hidden');
 }
 
 let clearFlag = false;

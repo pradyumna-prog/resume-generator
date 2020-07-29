@@ -12,7 +12,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 }
 
 html, body {
-	background: rgb(204,204,204); 
+	background: white;/*rgb(204,204,204);*/
 	font-family: 'Lato', helvetica, arial, sans-serif; 
 	font-size: 16px; 
 	color: #222;
@@ -42,16 +42,19 @@ th, td{
 	width: 100%;
 	max-width: 800px;
 	height: 29.7cm;
-	background: #f3f3f3;
+	background:  white;/*#f3f3f3;*/
 	margin: 30px auto;
 	border: 5px double black;
 	overflow-y: scroll;
+	box-shadow: 
+		5px 5px 3px 2px gray,
+		-5px -5px 3px 2px gray;
 }
 
 .mainDetails {
 	padding: 25px 35px;
 	border-bottom: 2px solid #222;
-	background: #ededed;
+	background:  white;/*#ededed;*/
 }
 
 #name h2 {
@@ -126,7 +129,7 @@ section:last-child {
 .sectionTitle h1 {
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 	font-size: normal;
-  color: #000000;
+  	color: #000000;
 }
 
 .sectionTitle h1::before {
@@ -186,12 +189,16 @@ section:last-child {
   margin-bottom: 2px;
 }
 
+#st:after, #sr:after{
+	content: '  ';
+}
+
 .btnRemove {
   color: red;
   border: 0px solid black;
   cursor: pointer;
-	float: right;
-	background-color: transparent;
+  float: right;
+  background-color: transparent;
 }
 
 input[type=text]{
@@ -229,7 +236,15 @@ input[type=text]:focus {
 
 .controller{
 	margin: 30px auto;
+	max-width: 800px;
 	text-align: center;
+	display: grid;
+	grid-template-rows: repeat(2,auto);
+	row-gap: 0.5em;
+}
+.sub-container_controller{
+	border: 2px solid gray;
+	border-radius: 5px;	
 }
 
 .controller img{
@@ -240,17 +255,44 @@ input[type=text]:focus {
 .controller a{
 	text-decoration: none;
 }
+#printMenuBtn{
+	font-size: 16px;
+	width: 100%;height: 35px;
+	border: none;outline: none;
+	background-color: inherit;
+	cursor: pointer;color: white;
+	border-radius: 5px;
+	background-color: rgb(37, 124, 238);
+}
+#printMenuBtn:hover{
+	background-color: rgb(35, 117, 224);
+}
+.toggleMenu{
+	font-size: 16px;
+}
+#toggleMenuBtn{
+	font-size: 16px;
+	width: 100%;
+	border: none;
+	outline: none;
+	background-color: rgb(228, 227, 227);
+	cursor: pointer;
+	height: 35px;
+	border-radius: 5px;
+}
+#toggleMenuBtn:hover{
+	background-color: rgb(214, 212, 212);
+}
 
-.controller button{
+.buttons button{
 	color: black;
 	border: 1px solid #444;
 	border-radius: 3px;
 	cursor: pointer;
 }
 
-.controller button:hover{
-	color: white;
-	background-color: #444;
+.buttons button:hover{
+	background-color: rgb(214, 212, 212);
 }
 
 .slider_wrap{
@@ -263,38 +305,65 @@ input[type=text]:focus {
 	cursor: pointer;
 	width: 70%;
 }
-
+.slider_value{
+    border: 1px solid black;
+    position: relative;
+	display: inline-block;
+	width: fit-content;
+    background-color: rgb(228, 227, 227);
+    color: black;
+	padding: 2px;
+	user-select: none;
+}
+.slider_value:before{
+    position: absolute;
+    content: ''; 
+    width: 7px; height: 7px;
+    transform: rotate(45deg);   
+    margin-left: -7px;
+    top: 30%;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    background-color:rgb(228, 227, 227);
+}
 .checkBox{
 	width: 70%;
 	max-width: 500px;
 	margin: 30px auto;
 	display: grid;
 	grid-template-columns: repeat(3, auto);
+	row-gap: 0.7em;
 }
-
 .checkBox label {
 	cursor: pointer;
 }
-
 .checkBox input[type="checkbox"] {
 	cursor: pointer;
 	float: left;
 }
-
 .buttons{
 	width: 70%;
 	height: 40px;
 	max-width: 500px;
 	margin: auto;
 	display: grid;
-	grid-template-columns: repeat(6, auto);
+	grid-template-columns: repeat(3, auto);
+	column-gap: 5px;
 }
-.mobile{
-	display: none;
+.myinfo{
+	display: grid;
+	grid-template-columns: repeat(2,auto);
+	column-gap: 1em;
+	justify-content: center;
+	margin-bottom: 5px;
+	margin-top: -35px;
 }
 a img{
 	position: relative;
 	top: 4px;
+}
+.hidden{
+	display: none;
 }
 
 @page{
@@ -305,11 +374,12 @@ a img{
 @media not print{
 	
 @media all and (max-width: 601px) {
-	#cv,.slider_wrap {
+	#cv, .controller {
 		width: 95%;
 		margin: 10px auto;
 		min-width: 280px;
 		height: unset;
+		box-shadow: unset;
 	}
 	
 	#profileimg img{
@@ -340,7 +410,11 @@ a img{
     	float: none;
 	}
 	.checkBox{
-		grid-template-columns: repeat(1, auto);
+		grid-template-columns: repeat(2, auto);
+		row-gap: 0.5em;
+	}
+	.myinfo{
+		margin-top: -10px;
 	}
 	
   table, thead, tbody, th, td, tr { 
@@ -415,24 +489,17 @@ a img{
 		width: 40%;
 		display: inline-block;
 	}
-	.controller{
-		width: 70%;
-	}
 	.buttons{
 		width: 50%;
 		height: unset;
-		grid-template-columns: repeat(2, auto);
-	}
-	.mobile{
-		display: unset;
-	}
-	.laptop{
-		display: none;
+		grid-template-columns: repeat(3, auto);
 	}
 	a img{
 		top: unset;
 	}
-	
+	.checkBox{
+		grid-template-columns: repeat(1, auto);
+	}
 }
 }
 
@@ -445,11 +512,12 @@ a img{
 		border: 0px solid black;	
 		overflow: hidden;
 	}
-	.controller{
+	.controller, .myinfo{
 		display: none;
 	}
 	.sectionTitle{
 		/*force background color on print*/
 		-webkit-print-color-adjust: exact;
 	}
+	
 }  

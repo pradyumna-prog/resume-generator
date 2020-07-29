@@ -8,6 +8,7 @@
 		<meta name="author" content="Pradyumna Tripathi" />
 
 		<link type="text/css" rel="stylesheet" 	href="formal.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="shortcut icon" href="imgs/cvmaker.ico">
 
 		<script src = "script.js"></script>
@@ -124,9 +125,9 @@
 							<h2 contenteditable="">Project Title</h2>
 							<button id = "P0" class="btnRemove" onclick="btnRemoveHandler(event)" class="controls">X</button>
 							<p class="subDetails">
-								Technologies: <span contenteditable="">add</span> |
-								Role: <span contenteditable="">add</span> |
-								Duration: <span contenteditable="">add</span>
+								<span id="st">Technologies: <span contenteditable="">add</span></span>
+								<span id="sr">Role: <span contenteditable="">add</span></span>
+								<span id="sd">Duration: <span contenteditable="">add</span></span>
 							</p>
 							<p contenteditable="" class="subDetails">Add description</p>
 						</article>
@@ -203,14 +204,23 @@
 					</p>
 					</div>
 				</section>
-
 		</div>
 	</div>
 	<div class="controller">
-		<div class="slider_wrap">
+		<span clas="printMenu">
+			<button id="printMenuBtn" onclick="printResume()">Print Resume</button>
+		</span>
+		<div class="sub-container_controller">
+		<span class="toggleMenu">
+			<button id="toggleMenuBtn" onclick="toggleMenu()">
+				Contorls
+				<i class="fa fa-caret-down" style="float: right;"></i></button>
+		</span>
+		<div class="slider_wrap" class="hidden">
 			<input class="slider_range" type="range" min="1" value="80" oninput="changeFont(this.value)" />
+			<div class="slider_value">14px</div>
 		</div>
-		<div class="checkBox">
+		<div class="checkBox" class="hidden">
 			<span>
 				<input type="checkbox" id="c0" onchange="toggleField('fieldOfInterestHead')" checked/>
 				<label for="Fields of Interest" onclick="checkboxClickHandler('c0','fieldOfInterestHead')">Fields of Interest</label>
@@ -223,27 +233,35 @@
 				<input type="checkbox" id="c2" onchange="toggleField('achievementHead')" checked/>
 				<label for="Achievements" onclick="checkboxClickHandler('c2','achievementHead')">Achievements</label>
 			</span>
+			<span>
+				<input type="checkbox" id="c3" onchange="toggleField('st')" checked/>
+				<label for="Technologies" onclick="checkboxClickHandler('c3','st')">Project (Technologies)</label>
+			</span>
+			<span>
+				<input type="checkbox" id="c4" onchange="toggleField('sr')" checked/>
+				<label for="Role" onclick="checkboxClickHandler('c4','sr')">Project (Role)</label>
+			</span>
+			<span>
+				<input type="checkbox" id="c5" onchange="toggleField('sd')" checked/>
+				<label for="Duration" onclick="checkboxClickHandler('c5','sd')">Project (Duration)</label>
+			</span>
 		</div>
-		<div class="buttons">
-			<a href="https://www.github.com/pradyumna-prog/" target="_BLANK" class="laptop">
-				<img src="imgs/github-dark.png" alt="github.com" title="Pradyumna Tripathi | GitHub">
-			</a>	
-			<button onclick="toggleControls(this)">Hide Controls</button>
-			<button onclick="changeFont('default')">Default Size</button>
+		<div class="buttons" class="hidden">
+			<button onclick="toggleControls(this)" id="hideControls">Hide Editor</button>
+			<button onclick="changeFont(80)">Default Font Size</button>
 			<button onclick="clearStorage()">Clear Cache</button>
-			<button onclick="window.print()">Print Resume</button>
-			<a href="https://www.linkedin.com/in/pradyumna-prog/" target="_BLANK"class="laptop">
-				<img src="imgs/linkedin-dark.png" alt="linkedin.com" title="Pradyumna Tripathi | LinkedIn">
-			</a>
-			<a href="https://www.github.com/pradyumna-prog/" target="_BLANK" class="mobile">
-				<br>
-				<img src="imgs/github-dark.png" alt="github.com" title="Pradyumna Tripathi | GitHub">
-			</a>	
-			<a href="https://www.linkedin.com/in/pradyumna-prog/" target="_BLANK"class="mobile">
-				<br>
-				<img src="imgs/linkedin-dark.png" alt="linkedin.com" title="Pradyumna Tripathi | LinkedIn">
-			</a>
 		</div>
+		</div>
+	</div>
+	<div class="myinfo">
+		<a href="https://www.github.com/pradyumna-prog/" target="_BLANK">
+			<br>
+			<img src="imgs/github-dark.png" alt="github.com" title="Pradyumna Tripathi | GitHub">
+		</a>	
+		<a href="https://www.linkedin.com/in/pradyumna-prog/" target="_BLANK">
+			<br>
+			<img src="imgs/linkedin-dark.png" alt="linkedin.com" title="Pradyumna Tripathi | LinkedIn">
+		</a>
 	</div>
 </body>
 </html>
